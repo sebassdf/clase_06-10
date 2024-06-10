@@ -7,6 +7,19 @@
 </head>
 <body>
     <h1>Alumnos Add</h1>
+
+    <div style="text-align: center;">
+        <h2>Fromulario CRUD para alumnos</h2><br>
+        <form action="alumnosAdd" method="POST">
+        </form><br><br>
+        <a href="{% url 'crud' %}">Volver</a>
+        <br>
+        <div id="idMensajes">
+            {% if mensaje %}
+                {{mensaje}}
+            {% endif %}
+        </div>
+    </div>
     
 </body>
 </html>
