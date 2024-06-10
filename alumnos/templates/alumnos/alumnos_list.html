@@ -19,6 +19,22 @@
     </div>
 
     <table>
+        {% if alumnos %}
+            <th>Rut</th>
+            <th>Nombre</th>
+            <th>Apellido P</th>
+            <th>Eliminar</th>
+            <th>Modificar</th>
+            {% for alumno in alumnos %}
+                <tr>
+                    <td>{{alumnos.rut}}</td>
+                    <td>{{alumnos.nombre}}</td>
+                    <td>{{alumnos.apellido_paterno}}</td>
+                    <td><a href="{% url 'alumnos_del' pk-alumno.rut}">Eliminar</a></td>
+                    <td><a href="{% url 'alumnos_finEdit' pk-alumno.rut}">Modificar</a></td>
+                </tr>
+               {% endfor $} 
+            {% endif %}
     </table>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
